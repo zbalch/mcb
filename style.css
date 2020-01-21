@@ -1,0 +1,281 @@
+body {
+  margin-top: 80px;
+  background: url("https://s5.postimg.cc/878ovishj/background-910412.jpg") fixed;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: solid;
+  padding-bottom: 10px;
+  width: 66%;
+  margin: 15px auto;
+  font-family: "Patua One";
+  font-weight: 500;
+}
+
+p, a {
+  font-family: "Source Sans Pro";
+}
+
+header {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #ddd;
+  z-index: 5;
+  box-shadow: 4px 2px 2px ;
+}
+
+#header-img {
+  margin: 15px;
+}
+
+footer {
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Navbar container */
+.navbar {
+  display: block;
+  overflow: hidden;
+  width: 50%;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    display: none;
+  }
+  
+  .mobile-nav {
+    display: block;
+  }
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: black;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a navy background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background: navy;
+  color: white;
+  font-weight: 700;
+}
+
+/* Dropdown content (hidden by default) */
+.drop-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 1);
+  z-index: 3;
+}
+
+/* Links inside the dropdown */
+.drop-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a navy background color to dropdown links on hover */
+.drop-content a:hover {
+  background-color: navy;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .drop-content {
+  display: block;
+}
+
+/* Slideshow styling */
+.slideshow {
+  margin: 10px auto;
+  max-width: 677px;
+}
+
+.slideshow img {
+  border-radius: 5px;
+  border: solid thin;
+  box-shadow: 2px 2px 2px black;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  z-index: 1;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+
+#img-slider {
+  position: relative;
+  height: 300px;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Rest of the page */
+.content-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Current event styling */
+#current-ev {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10% 90%;
+  grid-gap: 10px;
+}
+
+#current-ev h2 {
+  grid-column: 1 / span 2;
+}
+
+.ev-img {
+  width: 400px;
+  height: 600px;
+  border: solid thin;
+  border-radius: 5px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 2px black;
+}
+
+/* Mobile-friendly styling */
+@media screen and (max-width: 1023px) {
+  #about {
+    text-align: justify;
+  }
+  
+  p, a {
+    font-size: 12px;
+  }
+  
+  .mobile-nav {
+    display: block;
+  }
+  
+  select {
+    height: 40px;
+  }
+  
+  .navbar {
+    display: none;
+  }
+  
+  #current-ev {
+    display: grid;
+    grid-template-rows: 0.5fr, repeat(2, 50%);
+    grid-template-columns: 100%
+  }
+  
+  .ev-img {
+    grid-column: 1;
+  }
+}
+
+/* Contact information */
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.5fr, repeat(2, 1fr);
+  grid-gap: 15px;
+  width: 66%;
+}
+
+.contact h2 {
+  grid-column: 1 / span 2;
+}
+
+.post, .email, .support {
+  padding: 5px;
+  text-align: center;
+  border: dotted;
+  border-radius: 5px;
+}
+
+.support {
+  grid-column: 1 / span 2;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#smile {
+  width: 50%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#fb-img {
+  height: 75px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px black;
+}
+
+/* Styling for each section of the page to contrast background */
+.contact, #current-ev, #about {
+  border: solid thin;
+  border-radius: 20px 5px;
+  box-shadow: 2px 2px 2px black;
+  background: #eee;
+  margin: 15px auto;
+  padding: 15px;
+  width: 80%;
+}
